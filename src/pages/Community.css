@@ -1,0 +1,379 @@
+.community-page {
+  padding: 120px 0 4rem;
+  min-height: 100vh;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.community-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 20px;
+  background: var(--secondary-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.tab:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.tab.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-bg);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.tab-content {
+  min-height: 500px;
+}
+
+/* Chat Section */
+.chat-container {
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  background: var(--primary-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  font-weight: 600;
+  color: var(--accent-color);
+  font-family: 'Orbitron', monospace;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.message-content {
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.chat-input {
+  display: flex;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+.message-input {
+  flex: 1;
+  padding: 12px 16px;
+  background: var(--primary-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.message-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.message-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.send-btn {
+  padding: 12px 24px;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 25px;
+  color: var(--primary-bg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+/* Players Section */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.player-card {
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.player-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.player-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.player-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.player-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.player-kdr {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Rooms Section */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.room-card {
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.room-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.room-ping {
+  background: var(--primary-bg);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+}
+
+.room-game {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.room-players {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.players-count {
+  font-weight: 700;
+  color: var(--accent-color);
+  font-family: 'Orbitron', monospace;
+}
+
+.players-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Forums Section */
+.forum-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.forum-header h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  font-family: 'Orbitron', monospace;
+}
+
+.forum-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topic-item {
+  background: var(--secondary-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.topic-item:hover {
+  border-color: var(--accent-color);
+  transform: translateX(10px);
+}
+
+.topic-info {
+  flex: 1;
+}
+
+.topic-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.topic-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .community-tabs {
+    justify-content: flex-start;
+  }
+  
+  .tab {
+    padding: 10px 16px;
+  }
+  
+  .tab-label {
+    display: none;
+  }
+  
+  .chat-container {
+    height: 500px;
+  }
+  
+  .players-grid,
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .forum-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .topic-item {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .topic-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-input {
+    flex-direction: column;
+  }
+  
+  .send-btn {
+    align-self: flex-end;
+  }
+  
+  .player-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
